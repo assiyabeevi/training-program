@@ -1,0 +1,18 @@
+n=int(input("enter number of monkeys:")) 
+k=int(input("enter bananas per monkey")) 
+j=int(input("enter peanuts per monkey:")) 
+m=int(input("enter total bananas")) 
+p=int(input("enter total peanuts"))
+monkeys=0
+if m >= k:
+  monkeys = monkeys+(m//k)
+  m = m % k
+if p>j:
+  monkeys = monkeys+(p//j)
+  p = p % j
+if m>0 and p>0 and monkeys <n:
+  monkeys = monkeys+1
+if monkeys > n:
+    monkeys = n
+remaining = n-monkeys
+print("remainig monkeys:",remaining)  
